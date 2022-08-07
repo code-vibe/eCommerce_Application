@@ -3,3 +3,36 @@
 2022-08-05 08:42:45.424  INFO 57641 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
 2022-08-05 08:42:45.425  INFO 57641 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-08-05 08:42:45.429  INFO 57641 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-05 12:52:46.363  INFO 159546 --- [restartedMain] com.example.demo.SareetaApplication      : Starting SareetaApplication on agentx with PID 159546 (started by agentx in /home/agentx/P04-eCommerce Application)
+2022-08-05 12:52:46.370  INFO 159546 --- [restartedMain] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-08-05 12:52:46.603  INFO 159546 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-05 12:52:46.604  INFO 159546 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-05 12:52:48.872  INFO 159546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-05 12:52:49.016  INFO 159546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 4 repository interfaces.
+2022-08-05 12:52:50.136  INFO 159546 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73b376eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-05 12:52:50.763  INFO 159546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-05 12:52:50.799  INFO 159546 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-05 12:52:50.800  INFO 159546 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-08-05 12:52:50.932  INFO 159546 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-05 12:52:50.932  INFO 159546 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4328 ms
+2022-08-05 12:52:51.208  INFO 159546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-05 12:52:51.359  INFO 159546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-05 12:52:51.449  INFO 159546 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-08-05 12:52:51.541  INFO 159546 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-08-05 12:52:51.543  INFO 159546 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-08-05 12:52:51.714  INFO 159546 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-08-05 12:52:51.851  INFO 159546 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-05 12:52:52.698  INFO 159546 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 12:52:53.330  INFO 159546 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-05 12:52:53.620  WARN 159546 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 12:52:53.721  INFO 159546 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ad6d504, org.springframework.security.web.context.SecurityContextPersistenceFilter@3925da9a, org.springframework.security.web.header.HeaderWriterFilter@64aed6d5, org.springframework.web.filter.CorsFilter@1452ba, org.springframework.security.web.authentication.logout.LogoutFilter@1483d87a, com.example.demo.security.JWTAuthenticationFilter@5ea18d98, com.example.demo.security.JWTAuthenticationVerficationFilter@5691d027, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5664eeaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16eff9ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ae35104, org.springframework.security.web.session.SessionManagementFilter@bed797a, org.springframework.security.web.access.ExceptionTranslationFilter@57637b76, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@696f4f42]
+2022-08-05 12:52:53.912  INFO 159546 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-05 12:52:54.227  INFO 159546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-05 12:52:54.231  INFO 159546 --- [restartedMain] com.example.demo.SareetaApplication      : Started SareetaApplication in 8.473 seconds (JVM running for 9.13)
+2022-08-05 12:57:47.983  INFO 159546 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-05 12:57:47.996  INFO 159546 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 12:57:48.006  INFO 159546 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2022-08-05 12:57:48.006  INFO 159546 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-05 12:57:48.010  INFO 159546 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

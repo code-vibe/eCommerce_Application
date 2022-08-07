@@ -1,10 +1,8 @@
 package com.example.demo.controllers;
 
 import com.example.demo.TestUtils;
-import com.example.demo.controllers.ItemController;
 import com.example.demo.model.persistence.Item;
 import com.example.demo.model.persistence.repositories.ItemRepository;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
@@ -27,20 +25,25 @@ public class ItemControllerTest {
     public void setUp(){
         itemController = new ItemController(itemRepository);
         TestUtils.InjectObjects(itemController, "itemRepository", itemRepository);
+
     }
 
-    @Test
-    public void getItem(){
-        when(itemRepository.findAll()).thenReturn(myListOfItems());
-        ResponseEntity<List<Item>> responseEntity
-                = itemController.getItems();
+    public List<Item> myListOfItems(){
+        Item item = new Item();
+        item.setId(1L);
+        item.setPrice(new BigDecimal(5));
+        item.setName("Spoon");
 
-        List<Item> itemList = responseEntity.getBody();
-
-        itemList.forEach(item -> {
-            Assert.assertEquals(true,myListOfItems().contains(item));
-        });
+        Item itemOne = new Item();
+        itemOne.setId(2L);
+        itemOne.setName("Knife");
+        itemOne.setPrice(new BigDecimal(5));
+        List myList = new ArrayList<Item>();
+        myList.add(item);
+        myList.add(itemOne);
+        return myList;
     }
+
 
     @Test
     public void getItemById(){
@@ -68,20 +71,6 @@ public class ItemControllerTest {
 
 
 
-    public List<Item> myListOfItems(){
-        Item item = new Item();
-        item.setId(1L);
-        item.setPrice(new BigDecimal(5));
-        item.setName("Spoon");
 
-        Item item1 = new Item();
-        item1.setId(2L);
-        item1.setName("Knife");
-        item1.setPrice(new BigDecimal(5));
-        List myList = new ArrayList<Item>();
-        myList.add(item);
-        myList.add(item1);
-        return myList;
-    }
 
 }
